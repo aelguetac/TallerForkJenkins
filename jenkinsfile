@@ -32,7 +32,7 @@ node {
         stage('Test Curl QA') {
                     dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
             
-            
+                sh 'sleep 20'
                 sh 'curl -X GET \'http://localhost:8081/rest/mscovid/test?msg=testing\''
             
             
