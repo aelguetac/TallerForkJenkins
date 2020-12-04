@@ -50,7 +50,7 @@ node {
 //                    dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
             
             
-                echo 'Finaliza pipeline Alejandro Elgueta'
+                echo 'Finaliza pipeline con sonar Alejandro Elgueta'
             
 //                    }
         }
