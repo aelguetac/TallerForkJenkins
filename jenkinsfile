@@ -2,7 +2,7 @@ node {
 
         stage('Compile code') {
 //            dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
-                sh './mvnw clean compile -e'
+                sh 'mvn clean compile -e'
 //            }
             
         }
@@ -10,14 +10,14 @@ node {
 //                    dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
             
             
-                sh './mvnw clean test -e'
+                sh 'mvn clean test -e'
             
 //                    }
         }
         stage('Jar Code') {
 //                    dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
             
-                sh './mvnw clean package -e'
+                sh 'mvn clean package -e'
             
 //                    }
         }
