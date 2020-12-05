@@ -17,7 +17,7 @@ node {
                     }
         }
         stage('Sonar scanner') {
-		def scannerHome = tool name:'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
+		def scannerHome = tool name:'sonar_scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
 		withSonarQubeEnv('sonar') { 
       		sh "${scannerHome}/bin/sonar-scanner"
 		}
