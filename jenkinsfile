@@ -34,7 +34,7 @@ node {
         }
         stage('EOF') {
                     dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
-                	echo 'Finaliza pipeline con sonar Alejandro Elgueta'
+                	echo 'Finaliza pipeline con sonar y dir Alejandro Elgueta'
                     }
         }
 }
