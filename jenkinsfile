@@ -17,10 +17,12 @@ node {
                     }
         }
         stage('Sonar scanner') {
+			dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
 	//	def scannerHome = tool name:'sonar_scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation';
 		withSonarQubeEnv( installationName: 'sonar') {
       		sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
 	//	sh "${scannerHome}/bin/sonar-scanner"
+		}
 		}
 	}
 	stage('Run Jar') {
