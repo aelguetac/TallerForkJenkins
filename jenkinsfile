@@ -26,7 +26,7 @@ node {
 		}
 	}
         stage('Upload Nexus') {
-		nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'test-nexus', packages: [$class: 'MavenPackage', MavenAssetList:[[classifier: '', extensions 'jar' ,filePath 'c:\Users\EscalamientoSoporte\TallerForkJenkins\TallerForkJenkins\build\classes\com\devopsusach2020\DevOpsUsach2020Application.jar']]
+		nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'test-nexus', packages: [[$class: 'MavenPackage', MavenAssetList:[[classifier: '', extensions 'jar' ,filePath 'c:\Users\EscalamientoSoporte\TallerForkJenkins\TallerForkJenkins\build\classes\com\devopsusach2020\DevOpsUsach2020Application.jar']], mavenCoordinate: [artifactId: 'DevOpsUsach2020',groupId: 'com.devopsusach2020', packaging : 'jar', version: '0.0.1']]]
 	}
 //	stage('Run Jar') {
                     //dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
