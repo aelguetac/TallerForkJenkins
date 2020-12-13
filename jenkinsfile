@@ -1,6 +1,6 @@
 node {
 
-        stage('Compile code') {
+/*        stage('Compile code') {
            dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
                 sh 'mvn clean compile -e'
            }
@@ -24,12 +24,12 @@ node {
 	//	sh "${scannerHome}/bin/sonar-scanner"
 		}
 		}
-	}
+*/	}
         stage('Upload Nexus') {
 		dir('C:\\Users\\EscalamientoSoporte\\TallerForkJenkins\\TallerForkJenkins') {
 		nexusPublisher nexusInstanceId: 'nexus', nexusRepositoryId: 'test-nexus', 
-		packages: [[ $class: '', MavenAssetList: [[classifier: 'RELEASE', extensions: 'jar' ,
-		filePath: 'build/DevOpsUsach2020-0.0.1.jar']], 
+		packages: [[ $class: 'MavenPackage', MavenAssetList: [[classifier: 'RELEASE', extensions: 'jar' ,
+		filePath: '/Users/EscalamientoSoporte/TallerForkJenkins/TallerForkJenkins/build/DevOpsUsach2020-0.0.1.jar']], 
 		mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'com.devopsusach2020', packaging : 'jar', version: '0.0.1']]]
 		}
 
